@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Website - Get All Recipes on one Click</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="recipeName" placeholder="Type the Name of Dish Here...">
+            <button onclick="generate()">Search</button>
+        </div>
+        <div id="result"></div>
+        <div id="none"
+            style="background-color: rgba(255, 0, 0, 0.5); margin-top: 20px; padding: 10px; border-radius: 10px; color: white; text-align: center; display: none">
+            Input Field Can't Be Empty</div>
+        <div id="not"
+            style="background-color: rgba(100, 200, 100, 0.5); margin-top: 20px; padding: 10px; border-radius: 10px; color: white; text-align: center; display: none">
+            Can't fetch this Recipe</div>
+    </div>
+    <script src="script.js">
+        
+    </script>
+</body>
+
+</html>

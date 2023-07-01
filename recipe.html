@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Website - Get All Recipes on one Click</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="result2"></div>
+    </div>
+    <script>
+        var meal;
+        const url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
+        var recName = document.getElementById('recipeName')
+        function getting() {
+            var image = localStorage.getItem('img');
+            var nameHead = localStorage.getItem('name');
+            var preText = localStorage.getItem('instructions');
+            var link = localStorage.getItem('alink');
+            var src = localStorage.getItem('srclink');
+            result2.innerHTML = `
+            <a href='index.html' style='text-decoration: none'><p style='background-color: #f4c531; width: 40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center'>X</p></a>
+                    <img src='${image}'>
+                    <div class='details'>
+                        <h2>${nameHead}</h2>
+                        <div class='ingredients'>
+                            <h2 style="background-color: transparent; font-weight: lighter; margin-bottom: 20px;">Recipe</h2>
+                            <p id='pre'>${preText}</p>
+                                    </div>
+                                    </div>
+                                    <div style='display:flex; width:100%; align-items:center; justify-content: flex-end;'>
+                                        <a href='${link}' target='_blank' style='margin-top: 10px'><button class='rec' style='margin-right:10px'>Watch Tutorial</button></a>
+                                    <a href='${src}' target='_blank' style='margin-top: 10px'><button class='rec'>View Source</button></a>
+                                    <div>
+                                    `
+        }
+        getting()
+    </script>
+</body>
+
+</html>
